@@ -485,7 +485,7 @@
             for (var i = 0; i < order.length; i++){
                 ord = order[i]
                 let position = positions[ord]
-                let x = position[0] + rectangle.squareDimensions[0] / 2 - 10
+                let x = position[0] + rectangle.squareDimensions[0] / 2 - 22.5
                 let y = position[1] - rectangle.squareDimensions[1] / 3
                 ctx.fillText(positionNames[i], x, y)
             }
