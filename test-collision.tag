@@ -474,6 +474,7 @@
         self.numberSquares = function(rectangle, order){
             let squares = rectangle.squareList
             let positions = []
+            let positionNames = ["1st", "2nd", "3rd"];
             
             for (square of squares) {
                 positions.push(square.startPosition)
@@ -486,7 +487,7 @@
                 let position = positions[ord]
                 let x = position[0] + rectangle.squareDimensions[0] / 2 - 10
                 let y = position[1] - rectangle.squareDimensions[1] / 3
-                ctx.fillText(String(i + 1), x, y)
+                ctx.fillText(positionNames[i], x, y)
             }
 
             for (ord of order){
