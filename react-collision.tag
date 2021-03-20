@@ -30,14 +30,17 @@
     <div>
         <canvas width="950" height="400" style="border: solid black 2px" ref="myCanvas"></canvas>
     </div>
-
+    <button class="psychButton" onclick = "{reanimate}"> Play</button>
+    <div class="psychErrorMessage" show="{hasErrors}">{errorText}</div>
     <script>
         var self = this;
-        // test vars that can be changed
+        // test vars that can be changed    
         self.colours = ["red", "blue", "purple"];
         self.squareDimensions = [50, 50];
         self.speed = 0.3;
-
+        self.hasWatched = false;
+        self.watching = false;
+        self.hasErrors = false;
         self.MovingDisplay = function (colours, mirroring, launchTiming, extraObjs, squareDimensions, canvas, slider = null, speed, showFlash = false) {
             // What's different about this Moving Display?
             // no hole in blue square!
@@ -428,7 +431,7 @@
         self.leaveAttempts = 0;
 
         self.instructionText = "You are going to watch the following squares moving. When you are ready to watch, press Next";
-
+        self.errorText = "Please watch the animation at least once."
         self.onInit = function () {
             if (self.experiment.condition.factors.knowledge != "uninformed"){
                 self.mirroring = self.experiment.condition.factors.mirroring;
@@ -445,26 +448,34 @@
         self.onShown = function(){
             self.choice = self.experiment.choice
             let blueFirst = self.launchTiming == "canonical"
+            let illusionText = self.launchTiming == "canonical" ? "": "This is an illusion where people perceive the typical order of events, not what actually happens. "
             if ((self.choice[1] == 1 && !blueFirst) || self.choice[1] == 2  && blueFirst){
                 let youSaid = self.choice[1] == 1? "that the blue square moved second, but actually, it moved third - after the pink square" : "that the blue square moved third, but actually, it moved second - after the red square"
-                self.instructionText = "That is not correct. You said " + youSaid + ". Press Next to watch the animation again" 
+                self.instructionText = "That is not correct. You said " + youSaid + ". " + illusionText + "Press Play again to watch the animation again - you can watch it as many times as you'd like. Try to focus on when the blue square actually moves." 
             } else{
-                self.instructionText = "That is correct. Press Next to watch the animation again" 
+                self.instructionText = "That is correct. " + illusionText + "Press Play again to watch the animation again - you can watch it as many times as you'd like. Try to focus on when the blue square actually moves." 
             }
         }
         self.canLeave = function () {
-            if (self.leaveAttempts === 0) {
-                self.leaveAttempts += 1;
-                self.rectangle.animate();
-                window.setTimeout(self.finish, self.rectangle.getLastFinish() + 1500)
-            } else if (self.rectangle.animationEnded) {
+            if (self.hasWatched) {
                 return true;
-            }    
+            } else {
+                self.hasErrors = true;
+            }
+            
         }
         self.moveOn = function () {
             self.finish();
         };
 
+        self.reanimate = function(){
+            if (!self.watching){
+                self.hasErrors = false;
+                self.hasWatched = true;
+                self.rectangle.animate();
+                window.setTimeout((function() {self.watching = false;}), self.rectangle.getLastFinish());
+            }
+        }
 
 
     </script>
