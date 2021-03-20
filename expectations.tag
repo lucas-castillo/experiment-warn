@@ -16,7 +16,7 @@
 
     </style>
     <div id = "instructions">
-        In the next screen you will watch an animation starting like this:
+        In the next screen you will watch <b>the same animation again</b>. Remember that it starts like this:
     </div>
     <br>
 
