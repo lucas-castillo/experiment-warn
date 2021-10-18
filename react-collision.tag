@@ -40,7 +40,7 @@
         self.colours = ["red", "blue", "purple"];
         self.squareDimensions = [50, 50];
         self.speed = 0.3;
-        self.hasWatched = false;
+        self.hasWatched = 0;
         self.watching = false;
         self.hasErrors = false;
         self.MovingDisplay = function (colours, mirroring, launchTiming, extraObjs, squareDimensions, canvas, slider = null, speed, showFlash = false) {
@@ -477,7 +477,9 @@
         self.moveOn = function () {
             self.finish();
         };
-
+        self.results = function(){
+            return {"timesWatched": self.hasWatched}
+        }
         self.reanimate = function(){
             if (self.rectangle.animationEnded){
                 // if (!self.watching){
