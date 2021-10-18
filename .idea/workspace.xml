@@ -4,11 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fa908526-d9fb-4e1d-b2d9-d44639776c2e" name="Default Changelist" comment="" />
+    <list default="true" id="fa908526-d9fb-4e1d-b2d9-d44639776c2e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learn-collision-practice.tag" beforeDir="false" afterPath="$PROJECT_DIR$/learn-collision-practice.tag" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-collision-practice.tag" beforeDir="false" afterPath="$PROJECT_DIR$/react-collision-practice.tag" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-collision-practice.tag" beforeDir="false" afterPath="$PROJECT_DIR$/test-collision-practice.tag" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
@@ -23,9 +32,10 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.editor.code.editing" />
+    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
@@ -42,21 +52,12 @@
       <option name="presentableId" value="Default" />
       <updated>1607449065329</updated>
       <workItem from="1607449066423" duration="2540000" />
+      <workItem from="1634573736284" duration="2056000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607450470137">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607450470137" />
-    <state x="461" y="165" key="SettingsEditor" timestamp="1607451441531">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1607451441531" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -64,10 +65,19 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/attention-mcq.tag</url>
           <line>451</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/test-collision-practice.tag</url>
+          <line>45</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

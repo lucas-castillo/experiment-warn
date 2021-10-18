@@ -30,6 +30,9 @@
     <div>
         <canvas width="950" height="400" style="border: solid black 2px" ref="myCanvas"></canvas>
     </div>
+    <br>
+    <button class="psychButton" style="margin: 0;position: absolute; left: 50%; -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%);" onclick="{playButton}" refs="playButton" show="{showPlayButton}">Play</button><br>
+    <div class="psychErrorMessage" show={hasErrors}> {errorText}</div>
 
     <script>
         var self = this;
@@ -37,7 +40,8 @@
         self.colours = ["red", "blue", "purple"];
         self.squareDimensions = [50, 50];
         self.speed = 0.3;
-
+        self.showPlayButton = true;
+        // self.rectangle.animationEnded = fa;
         self.MovingDisplay = function (colours, mirroring, launchTiming, extraObjs, squareDimensions, canvas, slider = null, speed, showFlash = false) {
             // What's different about this Moving Display?
             // no hole in blue square!
@@ -444,25 +448,42 @@
             self.rectangle.squareList[1].duration = self.rectangle.squareList[0].duration
             self.rectangle.durations[1] = self.rectangle.squareList[1].duration
             self.rectangle.draw()
-
+            self.rectangle.animationEnded = true;
         };
         
         self.onShown = function(){
             self.choice = self.experiment.choice
             let blueFirst = true
-            if (self.choice[1] == 0){
+            if (self.choice[1] === 0){
                 let youSaid = "that the blue square moved first, but actually, it moved second - after the red square"
-                self.instructionText = "That is not correct. You said " + youSaid + ". Press Next to watch the animation again" 
+                self.instructionText = "That is not correct. You said " + youSaid + ". Press Play to watch the animation again (you can watch as many times as you like)."
             } else{
-                self.instructionText = "That is correct. Press Next to watch the animation again" 
+                self.instructionText = "That is correct. Press Play to watch the animation again (you can watch as many times as you like)."
             }
         }
         
+        self.playButton = function () {
+            self.hasErrors = false;
+            self.leaveAttempts += 1;
+            if (self.rectangle.animationEnded){
+                self.rectangle.animate();
+                // self.isBeingAnimated = true;
+                // window.setTimeout(self.animationOver, self.rectangle.getLastFinish())
+            } else{
+                self.hasErrors = true;
+                self.errorText = "Please wait until the animation ends before playing again."
+            }
+        }
+        // self.animationOver = function(){
+        //     self.isBeingAnimated = false;
+        // }
         self.canLeave = function () {
             if (self.leaveAttempts === 0) {
-                self.leaveAttempts += 1;
-                self.rectangle.animate();
-                window.setTimeout(self.finish, self.rectangle.getLastFinish() + 1500)
+                // self.leaveAttempts += 1;
+                // self.rectangle.animate();
+                // window.setTimeout(self.finish, self.rectangle.getLastFinish() + 1500)
+                self.hasErrors = true;
+                self.errorText = "Please press the Play button at least once."
             } else if (self.rectangle.animationEnded) {
                 return true;
             }
