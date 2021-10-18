@@ -27,10 +27,12 @@
     </style>
 
     <div id = "instructions">{instructionText}</div>
+    
     <div>
         <canvas width="950" height="400" style="border: solid black 2px" ref="myCanvas"></canvas>
     </div>
-    <button class="psychButton" onclick = "{reanimate}"> Play</button>
+    <br>
+    <button class="psychButton" style="margin: 0;position: absolute; left: 50%; -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%);" onclick="{reanimate}">Play</button><br>
     <div class="psychErrorMessage" show="{hasErrors}">{errorText}</div>
     <script>
         var self = this;
@@ -433,12 +435,13 @@
         self.instructionText = "You are going to watch the following squares moving. When you are ready to watch, press Next";
         self.errorText = "Please watch the animation at least once."
         self.onInit = function () {
-            if (self.experiment.condition.factors.knowledge != "uninformed"){
+            if (self.experiment.condition.factors.knowledge !== "uninformed"){
                 self.mirroring = self.experiment.condition.factors.mirroring;
                 self.launchTiming = self.experiment.condition.factors.order;
                 self.teach = (self.experiment.condition.factors.teach === "teach");
                 self.knowledge = self.experiment.condition.factors.knowledge
                 self.rectangle = new self.MovingDisplay(self.colours, self.mirroring, self.launchTiming, false, self.squareDimensions, self.refs.myCanvas, null, self.speed, false);
+                self.rectangle.animationEnded = true;
             } else{
                 self.skip = true;
             }
@@ -451,13 +454,20 @@
             let illusionText = self.launchTiming == "canonical" ? "": "This is an illusion where people perceive the typical order of events, not what actually happens. "
             if ((self.choice[1] == 1 && !blueFirst) || self.choice[1] == 2  && blueFirst){
                 let youSaid = self.choice[1] == 1? "that the blue square moved second, but actually, it moved third - after the pink square" : "that the blue square moved third, but actually, it moved second - after the red square"
-                self.instructionText = "That is not correct. You said " + youSaid + ". " + illusionText + "Press Play again to watch the animation again - you can watch it as many times as you'd like. Try to focus on when the blue square actually moves." 
+                let actualOrder = blueFirst? "Red, Blue, Purple" : "Red, Purple, Blue";
+                let extraInfo  = blueFirst? "" : "In fact, you're not alone at making this mistake. This is an illusion in which most people perceive the typical order of events, the order they expect to see, rather that the order in which events actually happen."
+                self.instructionText = "That is not correct. You said " + youSaid + ". " + illusionText +
+                    'So, the actual order in which the squares start moving is "'+ actualOrder + '". ' +
+                    extraInfo +
+                    '\n' +
+                    "To convince yourself, press Play to watch the animation again and try to focus on when the blue square actually moves.\n" +
+                    "Please watch the animation as many times as you need, until you convince yourself that the order of events is " + actualOrder + ".";
             } else{
                 self.instructionText = "That is correct. " + illusionText + "Press Play again to watch the animation again - you can watch it as many times as you'd like. Try to focus on when the blue square actually moves." 
             }
         }
         self.canLeave = function () {
-            if (self.hasWatched) {
+            if (self.hasWatched > 0) {
                 return true;
             } else {
                 self.hasErrors = true;
@@ -469,12 +479,13 @@
         };
 
         self.reanimate = function(){
-            if (!self.watching){
+            if (self.rectangle.animationEnded){
+                // if (!self.watching){
                 self.hasErrors = false;
-                self.hasWatched = true;
+                self.hasWatched += 1;
                 self.rectangle.animate();
-                window.setTimeout((function() {self.watching = false;}), self.rectangle.getLastFinish());
             }
+
         }
 
 

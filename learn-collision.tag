@@ -30,6 +30,9 @@
     <div>
         <canvas width="950" height="400" style="border: solid black 2px" ref="myCanvas"></canvas>
     </div>
+    <br>
+    <button class="psychButton" style="margin: 0;position: absolute; left: 50%; -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%);" onclick="{playButton}" refs="playButton" show="{showPlayButton}">Play</button><br>
+    <div class="psychErrorMessage" show={hasErrors}> {errorText}</div>
 
     <script>
         var self = this;
@@ -37,6 +40,7 @@
         self.colours = ["red", "blue", "purple"];
         self.squareDimensions = [50, 50];
         self.speed = 0.3;
+        self.showPlayButton = true;
 
         self.MovingDisplay = function (colours, mirroring, launchTiming, extraObjs, squareDimensions, canvas, slider = null, speed, showFlash = false) {
             // What's different about this Moving Display?
@@ -427,7 +431,7 @@
 
         self.leaveAttempts = 0;
 
-        self.instructionText = "You are going to watch the following squares moving. When you are ready to watch, press Next";
+        self.instructionText = "You are going to watch the following squares moving. When you are ready to watch, press Play";
 
         self.onInit = function () {
             self.mirroring = self.experiment.condition.factors.mirroring;
@@ -438,11 +442,21 @@
 
         };
 
+        self.playButton = function(){
+            self.hasErrors = false;
+            self.leaveAttempts += 1;
+            self.rectangle.animate();
+            self.showPlayButton = false;
+            window.setTimeout(self.finish, self.rectangle.getLastFinish() + 2000);
+        };
+
         self.canLeave = function () {
             if (self.leaveAttempts === 0) {
-                self.leaveAttempts += 1;
-                self.rectangle.animate();
-                window.setTimeout(self.finish, self.rectangle.getLastFinish() + 1500)
+                // self.leaveAttempts += 1;
+                // self.rectangle.animate();
+                // window.setTimeout(self.finish, self.rectangle.getLastFinish() + 1500)
+                self.errorText = "Please press the Play button."
+                self.hasErrors = true;
             } else if (self.rectangle.animationEnded) {
                 return true;
             }
