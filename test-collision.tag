@@ -28,10 +28,10 @@
 
     <div id = "instructions">{instructionText}</div>
     <div>
-        <canvas width="950" height="200" style="border: solid black 2px" ref="myCanvas"></canvas><br>
-        <button class="psychButton" style="margin: 0;position: absolute; left: 50%; -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%);" onclick="{selectOption1}" refs="select1">Select</button><br>
-        <canvas width="950" height="200" style="border: solid black 2px" ref="myCanvas2"></canvas><br>
-        <button class="psychButton" style="margin: 0;position: absolute; left: 50%; -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%);" onclick="{selectOption2}" refs="select2">Select</button><br>
+        <canvas width="950" height="200" style="border: solid black 2px" ref="myCanvas"></canvas><br><br>
+        <button class="psychButton" style="margin: 0;position: absolute; left: 50%; -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%);" onclick="{selectOption1}" refs="select1">Select</button><br><br>
+        <canvas width="950" height="200" style="border: solid black 2px" ref="myCanvas2"></canvas><br><br>
+        <button class="psychButton" style="margin: 0;position: absolute; left: 50%; -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%);" onclick="{selectOption2}" refs="select2">Select</button><br><br>
     </div>
     <div class="psychErrorMessage" show={hasErrors}> {errorText}</div>
     <script>

@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fa908526-d9fb-4e1d-b2d9-d44639776c2e" name="Default Changelist" comment="Add fixed indices" />
+    <list default="true" id="fa908526-d9fb-4e1d-b2d9-d44639776c2e" name="Default Changelist" comment="test">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-collision.tag" beforeDir="false" afterPath="$PROJECT_DIR$/test-collision.tag" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -53,7 +57,8 @@
       <workItem from="1607449066423" duration="2540000" />
       <workItem from="1634573736284" duration="6187000" />
       <workItem from="1634655587953" duration="595000" />
-      <workItem from="1634718273952" duration="4045000" />
+      <workItem from="1634718273952" duration="4121000" />
+      <workItem from="1634728591296" duration="639000" />
     </task>
     <task id="LOCAL-00001" summary="Improve Practice UI.">
       <created>1634575843737</created>
@@ -90,7 +95,14 @@
       <option name="project" value="LOCAL" />
       <updated>1634721947366</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="test">
+      <created>1634722368953</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1634722368953</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -114,7 +126,8 @@
     <MESSAGE value="Add number of times watched" />
     <MESSAGE value="Add confidence.tag" />
     <MESSAGE value="Add fixed indices" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add fixed indices" />
+    <MESSAGE value="test" />
+    <option name="LAST_COMMIT_MESSAGE" value="test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -123,11 +136,6 @@
           <url>file://$PROJECT_DIR$/attention-mcq.tag</url>
           <line>451</line>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/test-collision-practice.tag</url>
-          <line>45</line>
-          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
