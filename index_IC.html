@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Experiment</title>
+    <script src="https://exppsych-projects.pals.ucl.ac.uk/experiments/psychScript/0.961/psychScript.js"></script>
+    <script src="https://exppsych-projects.pals.ucl.ac.uk/experiments/psychScript/0.961/utils.js"></script>
+
+</head>
+<body>
+
+<experiment is-debug="{true}" fly-through="{false}" name="lucasExp2"
+            style="display: none;" width="960"
+            block-by-ip="{true}" title="Experiment"
+            whitelist-ips="{['']}"
+            factors="{{knowledge: ['informed'], order: ['canonical'], mirroring: [Math.floor(Math.random() * 2) === 0]}}"
+            completion-code = "{'5D418A0C'}"
+>
+
+
+    <instructions process="{true}">
+        Hello and thank you for taking part in this experiment.
+
+        In this experiment you will watch some animations and perform a task for each of them.
+
+        Whenever you are ready, click next to see more detailed instructions and make sure you read them carefully.
+
+    </instructions>
+
+
+    <instructions process ="{true}">
+        <b style="color:red">WARNING: This experiment contains flashing lights.</b>
+
+        If you believe you will be affected please leave the experiment now.
+    </instructions>
+
+    <gdpr institution="UCL" principal="Lucas Castillo" email="lucas.castillo.19@ucl.ac.uk" ethics="EP/2017/005" controller="data-protection@ucl.ac.uk"></gdpr>
+
+    <consent></consent>
+
+    <instructions process="{true}">
+        In the following screen, you will watch some animations in order to learn how different squares interact. Please watch carefully.
+
+        Afterwards, you will be asked to select which of two animations you watched.
+    </instructions>
+
+    <attention-movement></attention-movement>
+
+    <learn-collision-practice></learn-collision-practice>
+    <test-collision-practice></test-collision-practice>
+    <react-collision-practice></react-collision-practice>
+
+   <attention-mcq></attention-mcq>
+
+   <instructions process="{true}">
+       In the next few trials, the screen will flash and we will ask you to synchronize the time of the flashing with the motion of one of the squares.
+       To do so, you will use a slider to change when the flash appears, moving it left to make it appear earlier and moving it right to make it appear later.
+       In the next screen you can see how that works.
+   </instructions>
+
+   <slider-practice></slider-practice>
+
+   <instructions process="{true}">
+        Excellent! You will now see another animation showing how different squares interact. Again, pay close attention, as you will be asked which of two animations you watched.
+   </instructions>
+
+   <learn-collision></learn-collision>
+    <test-collision></test-collision>
+    <react-collision></react-collision>
+
+   <instructions>
+       Now, you will see the same animation <b>again</b>. Synchronize the flash on the screen with the time when the blue square starts moving.
+       As you saw before, you can change the moment the flash appears on screen by moving the slider.
+   </instructions>
+   <confidence></confidence>
+   <test-trial></test-trial>
+   <what-saw></what-saw>
+   <demographics></demographics>
+
+   <feedback></feedback>
+
+    <prolific></prolific>
+
+    <go-to-prolific></go-to-prolific>
+
+</experiment>
+
+
+
+
+</body>
+</html>
