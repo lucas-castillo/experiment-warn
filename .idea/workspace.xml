@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fa908526-d9fb-4e1d-b2d9-d44639776c2e" name="Default Changelist" comment="Improve Practice UI.">
+    <list default="true" id="fa908526-d9fb-4e1d-b2d9-d44639776c2e" name="Default Changelist" comment="Add number of times watched">
+      <change afterPath="$PROJECT_DIR$/confidence.tag" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learn-collision-practice.tag" beforeDir="false" afterPath="$PROJECT_DIR$/learn-collision-practice.tag" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/learn-collision.tag" beforeDir="false" afterPath="$PROJECT_DIR$/learn-collision.tag" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-collision.tag" beforeDir="false" afterPath="$PROJECT_DIR$/react-collision.tag" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +38,11 @@
     <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\experiment-warn" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Unnamed" type="NodeJSConfigurationType" nameIsGenerated="true" working-dir="$PROJECT_DIR$">
       <method v="2" />
@@ -51,7 +57,9 @@
       <option name="presentableId" value="Default" />
       <updated>1607449065329</updated>
       <workItem from="1607449066423" duration="2540000" />
-      <workItem from="1634573736284" duration="5157000" />
+      <workItem from="1634573736284" duration="6187000" />
+      <workItem from="1634655587953" duration="595000" />
+      <workItem from="1634718273952" duration="3438000" />
     </task>
     <task id="LOCAL-00001" summary="Improve Practice UI.">
       <created>1634575843737</created>
@@ -60,7 +68,21 @@
       <option name="project" value="LOCAL" />
       <updated>1634575843737</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Improve Test UI.">
+      <created>1634578977409</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1634578977409</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Add number of times watched">
+      <created>1634578997282</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1634578997282</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -76,10 +98,13 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Improve Practice UI." />
-    <option name="LAST_COMMIT_MESSAGE" value="Improve Practice UI." />
+    <MESSAGE value="Improve Test UI." />
+    <MESSAGE value="Add number of times watched" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add number of times watched" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -92,7 +117,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/test-collision-practice.tag</url>
           <line>45</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
