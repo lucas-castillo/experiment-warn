@@ -26,7 +26,7 @@
 
     </style>
 
-    <div id = "instructions">{instructionText}</div>
+    <div id = "instructions2" style="font-size: 20px">instructionText</div>
     
     <div>
         <canvas width="950" height="400" style="border: solid black 2px" ref="myCanvas"></canvas>
@@ -453,18 +453,19 @@
             let blueFirst = self.launchTiming == "canonical"
             let illusionText = self.launchTiming == "canonical" ? "": "This is an illusion where people perceive the typical order of events, not what actually happens. "
             if ((self.choice[1] == 1 && !blueFirst) || self.choice[1] == 2  && blueFirst){
-                let youSaid = self.choice[1] == 1? "that the blue square moved second, but actually, it moved third - after the pink square" : "that the blue square moved third, but actually, it moved second - after the red square"
+                let youSaid = self.choice[1] == 1? "that the blue square moved second, but actually, it moved third - after the purple square" : "that the blue square moved third, but actually, it moved second - after the red square"
                 let actualOrder = blueFirst? "Red, Blue, Purple" : "Red, Purple, Blue";
-                let extraInfo  = blueFirst? "" : "In fact, you're not alone at making this mistake. This is an illusion in which most people perceive the typical order of events, the order they expect to see, rather that the order in which events actually happen."
-                self.instructionText = "That is not correct. You said " + youSaid + ". " + illusionText +
+                let extraInfo  = blueFirst? "" : "In fact, you're not alone at making this mistake. This is <b>an illusion in which most people perceive the typical order of events, the order they expect to see, rather that the order in which events actually happen</b>."
+                self.instructionText = "<p>That is not correct. You said " + youSaid + ". " + illusionText +
                     'So, the actual order in which the squares start moving is "'+ actualOrder + '". ' +
                     extraInfo +
-                    '\n' +
-                    "To convince yourself, press Play to watch the animation again and try to focus on when the blue square actually moves.\n" +
-                    "Please watch the animation as many times as you need, until you convince yourself that the order of events is " + actualOrder + ".";
+                    '</p><p>' +
+                    "To convince yourself, press Play to watch the animation again and try to focus on when the blue square actually moves.</p><p>" +
+                    "Please watch the animation as many times as you need, until you convince yourself that the order of events is " + actualOrder + ".</p>";
             } else{
                 self.instructionText = "That is correct. " + illusionText + "Press Play again to watch the animation again - you can watch it as many times as you'd like. Try to focus on when the blue square actually moves." 
             }
+            document.getElementById("instructions2").innerHTML = self.instructionText;
         }
         self.canLeave = function () {
             if (self.hasWatched > 0) {
