@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fa908526-d9fb-4e1d-b2d9-d44639776c2e" name="Default Changelist" comment="test">
+    <list default="true" id="fa908526-d9fb-4e1d-b2d9-d44639776c2e" name="Default Changelist" comment="fix UI">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-collision.tag" beforeDir="false" afterPath="$PROJECT_DIR$/test-collision.tag" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/confidence.tag" beforeDir="false" afterPath="$PROJECT_DIR$/confidence.tag" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/expectations.tag" beforeDir="false" afterPath="$PROJECT_DIR$/expectations.tag" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index_IR.html" beforeDir="false" afterPath="$PROJECT_DIR$/index_IR.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-collision.tag" beforeDir="false" afterPath="$PROJECT_DIR$/react-collision.tag" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +60,7 @@
       <workItem from="1634573736284" duration="6187000" />
       <workItem from="1634655587953" duration="595000" />
       <workItem from="1634718273952" duration="4121000" />
-      <workItem from="1634728591296" duration="639000" />
+      <workItem from="1634728591296" duration="2182000" />
     </task>
     <task id="LOCAL-00001" summary="Improve Practice UI.">
       <created>1634575843737</created>
@@ -102,7 +104,14 @@
       <option name="project" value="LOCAL" />
       <updated>1634722368953</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="fix UI">
+      <created>1634729259770</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1634729259770</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -127,7 +136,8 @@
     <MESSAGE value="Add confidence.tag" />
     <MESSAGE value="Add fixed indices" />
     <MESSAGE value="test" />
-    <option name="LAST_COMMIT_MESSAGE" value="test" />
+    <MESSAGE value="fix UI" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix UI" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

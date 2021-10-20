@@ -52,7 +52,7 @@
         self.squareDimensions = [50, 50];
         self.speed = 0.3;
         self.showFlash = true;
-        self.answers = ["Red will move, then Blue will move, then Pink will move", "Red will move, then Pink will move, then Blue will move", "Red will move, then Blue and Pink will move at the same time"];
+        self.answers = ["Red will move, then Blue will move, then Purple will move", "Red will move, then Purple will move, then Blue will move", "Red will move, then Blue and Purple will move at the same time"];
         self.questions = self.answers.slice();
         shuffleArray(self.questions);
 

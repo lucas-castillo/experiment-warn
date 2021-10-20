@@ -62,7 +62,7 @@
         self.squareDimensions = [50, 50];
         self.speed = 0.3;
         self.showFlash = true;
-        self.answers = ["Red will move, then Blue will move, then Pink will move", "Red will move, then Pink will move, then Blue will move", "Red will move, then Blue and Pink will move at the same time"];
+        self.answers = ["Red will move, then Blue will move, then Purple will move", "Red will move, then Purple will move, then Blue will move", "Red will move, then Blue and Purple will move at the same time"];
         self.questions = self.answers.slice();
         shuffleArray(self.questions);
 
@@ -461,7 +461,7 @@
             self.launchTiming = self.experiment.condition.factors.order;
             self.knowledge = self.experiment.condition.factors.knowledge;
             self.radios = [self.refs.radioA, self.refs.radioB, self.refs.radioC];
-            self.answers = ["Red will move and push Blue, then Blue will move and push Pink", "Red will move and touch Blue, which will make Pink move and after Pink stops moving Blue will move", "Red will move and touch Blue, and then Blue and Pink will move at the same time"];
+            self.answers = ["Red will move and push Blue, then Blue will move and push Purple", "Red will move and touch Blue, which will make Purple move and after Purple stops moving Blue will move", "Red will move and touch Blue, and then Blue and Purple will move at the same time"];
             self.questions = self.answers.slice();
             shuffleArray(self.questions);
 
