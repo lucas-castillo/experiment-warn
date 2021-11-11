@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fa908526-d9fb-4e1d-b2d9-d44639776c2e" name="Default Changelist" comment="relocate shorts" />
+    <list default="true" id="fa908526-d9fb-4e1d-b2d9-d44639776c2e" name="Default Changelist" comment="relocate shorts">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/confidence.tag" beforeDir="false" afterPath="$PROJECT_DIR$/confidence.tag" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -56,7 +60,8 @@
       <workItem from="1634655587953" duration="595000" />
       <workItem from="1634718273952" duration="4121000" />
       <workItem from="1634728591296" duration="3512000" />
-      <workItem from="1634732223467" duration="246000" />
+      <workItem from="1634732223467" duration="527000" />
+      <workItem from="1636639544980" duration="2988000" />
     </task>
     <task id="LOCAL-00001" summary="Improve Practice UI.">
       <created>1634575843737</created>
