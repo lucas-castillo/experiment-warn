@@ -14,6 +14,36 @@
             margin: 5px;
         }
 
+        .slider {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 15px;
+            border-radius: 5px;
+            background: linear-gradient(to right, #82CFD0 0%, #82CFD0 50%, #fff 50%, #fff 100%);
+            outline: none;
+            opacity: 0.7;
+            -webkit-transition: .2s;
+            transition: opacity .2s;
+        }
+
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: black;
+            cursor: pointer;
+        }
+
+        .slider::-moz-range-thumb {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: black;
+            cursor: pointer;
+        }
+
     </style>
     <div id = "instructions">
         In the next screen you will watch <b>the same animation again</b>. Remember that it starts like this:
@@ -28,7 +58,7 @@
             <label for="slider" style="float: right">Very Confident</label>
         </div>
         <div class="slidercontainer" id="sliderCont">
-            <input id = "slider" onmouseup="{sliderMouseUp}" type="range" min="0" max="200" value="100" class="slider" style="width:950px; z-index: 0" refs="confidenceSlider">
+            <input id = "slider" onmouseup="{sliderMouseUp}" oninput="{sliderChange}" type="range" min="0" max="200" value="100" class="slider" style="width:950px; z-index: 0" refs="confidenceSlider">
             <span class="dot" ref="myPrompt"></span>
         </div>
         <br>
@@ -463,6 +493,7 @@
             let correctOrder = self.launchTiming === "canonical" ? canonicalOrder : reversedOrder;
             correctOrder = self.knowledge === "informed" ? " (" + correctOrder + ") " : " "
             self.confidenceQuestion = "How certain are you now of your ability to see the correct" + correctOrder + "order of events?";
+            self.sliderChange();
         }
         self.canLeave = function () {
 
@@ -487,6 +518,29 @@
         self.sliderMouseUp = function () {
             self.sliderTouches++;
         }
+
+        self.sliderChange = function(){
+            let confidenceValue = document.getElementById("slider").value / 200;
+            let origin = [194, 67, 27]
+            let destiny = [71, 184, 61]
+            let newcolor = [
+                Math.floor((destiny[0] - origin[0]) * confidenceValue + origin[0]),
+                Math.floor((destiny[1] - origin[1]) * confidenceValue + origin[1]),
+                Math.floor((destiny[2] - origin[2]) * confidenceValue + origin[2])
+            ]
+            let hashCol = rgbToHex(newcolor[0], newcolor[1], newcolor[2]);
+            let value = confidenceValue * 100;
+            document.getElementById("slider").style.background = 'linear-gradient(to right, ' + hashCol +' 0%, '+ hashCol + ' ' + value + '%, #fff ' + value + '%, white 100%)'
+        }
+
+        function componentToHex(c) {
+            var hex = c.toString(16);
+            return hex.length == 1 ? "0" + hex : hex;
+        }
+        function rgbToHex(r, g, b) {
+            return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
+        }
+
 
     </script>
 </confidence>
