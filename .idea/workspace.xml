@@ -4,10 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fa908526-d9fb-4e1d-b2d9-d44639776c2e" name="Default Changelist" comment="relocate shorts">
+    <list default="true" id="fa908526-d9fb-4e1d-b2d9-d44639776c2e" name="Default Changelist" comment="Change slider">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/confidence.tag" beforeDir="false" afterPath="$PROJECT_DIR$/confidence.tag" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index_IC.html" beforeDir="false" afterPath="$PROJECT_DIR$/index_IC.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index_IR.html" beforeDir="false" afterPath="$PROJECT_DIR$/index_IR.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index_UC.html" beforeDir="false" afterPath="$PROJECT_DIR$/index_UC.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index_UR.html" beforeDir="false" afterPath="$PROJECT_DIR$/index_UR.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index_short_IC.html" beforeDir="false" afterPath="$PROJECT_DIR$/index_short_IC.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index_short_IR.html" beforeDir="false" afterPath="$PROJECT_DIR$/index_short_IR.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index_short_UC.html" beforeDir="false" afterPath="$PROJECT_DIR$/index_short_UC.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index_short_UR.html" beforeDir="false" afterPath="$PROJECT_DIR$/index_short_UR.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +67,7 @@
       <workItem from="1634718273952" duration="4121000" />
       <workItem from="1634728591296" duration="3512000" />
       <workItem from="1634732223467" duration="527000" />
-      <workItem from="1636639544980" duration="2988000" />
+      <workItem from="1636639544980" duration="3178000" />
     </task>
     <task id="LOCAL-00001" summary="Improve Practice UI.">
       <created>1634575843737</created>
@@ -154,7 +160,21 @@
       <option name="project" value="LOCAL" />
       <updated>1634732440351</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Change instructions">
+      <created>1636642579459</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1636642579459</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Change slider">
+      <created>1636642589396</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1636642589396</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -186,7 +206,9 @@
     <MESSAGE value="re-add expectations" />
     <MESSAGE value="add short versions" />
     <MESSAGE value="relocate shorts" />
-    <option name="LAST_COMMIT_MESSAGE" value="relocate shorts" />
+    <MESSAGE value="Change instructions" />
+    <MESSAGE value="Change slider" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change slider" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
